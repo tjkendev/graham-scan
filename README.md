@@ -40,6 +40,8 @@ $ npm install
 $ npm run compile
 ```
 
+コンパイルに成功すると"public"フォルダ内に成果物ができる
+
 ## その他
 
 ### - watch
