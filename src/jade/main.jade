@@ -1,0 +1,28 @@
+center
+  h3 Graham Scanで凸包を求める
+  .app_frame
+    canvas#app_canvas(width="640", height="480")
+    .float-left
+      .objframe.float-left
+        |待機時間
+        input#wait_frame(type="number")
+        .clear
+      .objframe.float-left
+        |頂点数
+        input#vertex_num(type="number")
+        .clear
+      .objframe.float-left
+        input.flat-button#cv_init(type="button", value="Init")
+        input.flat-button#cv_reset(type="button", value="Reset")
+        input.flat-button#step_to(type="button", value="Next")
+        .clear
+      .objframe.float-left
+        label
+          input#step_play(type="checkbox")
+          |手動再生
+        .clear
+      .clear
+  pre
+    |凸包アルゴリズム : Graham Scan
+    |x座標優先でソートして、上側と下側から凸包を求めます。
+    |ソートにO(NlogN)、上側と下側からの凸包を求めるのにO(N)なので、O(NlogN)
