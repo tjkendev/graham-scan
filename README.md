@@ -5,6 +5,7 @@ HTML5上でGrahamScan(凸法を求めるアルゴリズム)を表示できるよ
 ステップ的に可視化して凸包を計算していく
 
 以下で実行しているものが見られる
+
 http://smijake3.s602.xrea.com/tips/algorithm/graham_scan/
 
 ## 構築環境
