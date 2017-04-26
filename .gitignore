@@ -1,6 +1,3 @@
-# フォルダ
-public/
-
 # node, npm
 node_modules
 npm-debug.log

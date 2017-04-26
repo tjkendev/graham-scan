@@ -17,18 +17,6 @@ module.exports = (grunt)->
           new webpack.optimize.DedupePlugin(),
           new webpack.optimize.UglifyJsPlugin()
         )
-    # grunt-contrib-jade
-    jade:
-      html:
-        options:
-          pretty: true
-        files: [
-          expand: true
-          cwd: 'src/jade-html/'
-          src: '**/*.jade'
-          dest: 'public/'
-          ext: '.html'
-        ]
     # grunt-contrib-less
     less:
       development:
@@ -73,14 +61,6 @@ module.exports = (grunt)->
           'webpack.config.js'
         ]
         tasks: ['webpack', 'uglify']
-      # jade-html task
-      jade_html:
-        options:
-          spawn: true
-        files: [
-          'src/jade-html/**/*.jade'
-        ]
-        tasks: ['jade']
       # less task
       less:
         options:
@@ -100,4 +80,4 @@ module.exports = (grunt)->
   grunt.loadNpmTasks 'grunt-coffee-jshint'
   grunt.loadNpmTasks 'grunt-webpack'
 
-  grunt.registerTask 'default', ['jade', 'less:development', 'cssmin', 'webpack', 'uglify']
+  grunt.registerTask 'default', ['less:development', 'cssmin', 'webpack', 'uglify']
