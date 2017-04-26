@@ -1,3 +1,7 @@
+# public
+public/js/app.js
+public/css/app.css
+
 # node, npm
 node_modules
 npm-debug.log
