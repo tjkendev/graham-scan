@@ -1,12 +1,16 @@
-## Description
+# Graham Scan の可視化
 
-HTML5上でGrahamScan(凸包を求めるアルゴリズム)を表示できるようにしたもので、2014年頃に作ったもの
+## 概要
 
-ステップ的に可視化して凸包を計算していく
+2014年頃に制作
+
+HTML5上でGrahamScan(凸包アルゴリズム)を表示できるようにしたもの
+
+ステップ的に可視化して凸包を計算する
 
 以下で実行しているものが見られる
 
-http://smijake3.s602.xrea.com/tips/algorithm/graham_scan/
+- http://smijake3.s602.xrea.com/tips/algorithm/graham_scan/
 
 ## 構築環境
 - Node.js v7.5.0
