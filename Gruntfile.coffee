@@ -14,7 +14,6 @@ module.exports = (grunt)->
             "process.env":
               "NODE_ENV": JSON.stringify("production")
           ),
-          new webpack.optimize.DedupePlugin(),
           new webpack.optimize.UglifyJsPlugin()
         )
     # grunt-contrib-less
