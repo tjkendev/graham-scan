@@ -18,6 +18,7 @@
   "author": "jakejaga",
   "license": "MIT",
   "dependencies": {
+    "acorn": ">=5.7.4",
     "braces": "^3.0.2",
     "clean-css": "^4.2.3",
     "coffee-loader": "^0.7.2",
