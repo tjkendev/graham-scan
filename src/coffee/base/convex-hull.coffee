@@ -12,13 +12,13 @@ module.exports = class ConvexHullClass
     @vert = []
 
   # 頂点追加
-  add: (x, y)->
+  add: (x, y) ->
     @vert.push [x, y]
 
   # 頂点ソート処理
   sort: ->
     @vert.sort(
-      (e1, e2)->
+      (e1, e2) ->
         if e1[0] != e2[0]
           return if e1[0] < e2[0] then -1 else 1
         else if e1[1] != e2[1]
@@ -34,26 +34,26 @@ module.exports = class ConvexHullClass
     @mode = 0
 
   # 外積
-  cross: (a, b, c)->
+  cross: (a, b, c) ->
     x0 = b[0] - a[0]; y0 = b[1] - a[1]
     x1 = c[0] - a[0]; y1 = c[1] - a[1]
-    return x0*y1 - x1*y0
+    return x0 * y1 - x1 * y0
 
   # (i)下側凸包 (i = 0 -> n-1)
-  bottom_ch: (i)->
+  bottom_ch: (i) ->
     k = @c_vert.length
-    if k>1 && @cross(@c_vert[k-2], @c_vert[k-1], @vert[i])<=0
+    if k > 1 && @cross(@c_vert[k - 2], @c_vert[k - 1], @vert[i]) <= 0
       @c_vert.pop()
       return false
     @c_vert.push @vert[i]
-    if i==@vert.length-1
+    if i == @vert.length - 1
       @t = @c_vert.length
     return true
 
   # (ii)上側凸包 (i = n-2 -> 0)
-  top_ch: (i)->
+  top_ch: (i) ->
     k = @c_vert.length
-    if k>@t && @cross(@c_vert[k-2], @c_vert[k-1], @vert[i])<=0
+    if k > @t && @cross(@c_vert[k - 2], @c_vert[k - 1], @vert[i]) <= 0
       @c_vert.pop()
       return false
     @c_vert.push @vert[i]
@@ -75,10 +75,10 @@ module.exports = class ConvexHullClass
       return @c_vert
     @cv_init()
     @sort()
-    for i in [0..n-1]
+    for i in [0 .. (n - 1)]
       while !@bottom_ch(i)
         null
-    for i in [n-2..0]
+    for i in [(n - 2) .. 0]
       while !@top_ch(i)
         null
     return @c_vert
@@ -100,9 +100,9 @@ module.exports = class ConvexHullClass
           ++@i
       if @i == n
         ++@mode
-        @i = n-2
+        @i = n - 2
     else if @mode == 1
-      if @i>=0
+      if @i >= 0
         if @top_ch(@i)
           --@i
       if @i < 0

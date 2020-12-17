@@ -7,7 +7,7 @@ module.exports = class DotClass
   rad: 5
 
   # コンストラクタ
-  constructor: (canvas)->
+  constructor: (canvas) ->
     @canvas = canvas
 
   # 頂点データ全削除
@@ -15,20 +15,20 @@ module.exports = class DotClass
     @vert = []
 
   # 頂点追加
-  add: (x, y)->
-    @vert.push {x: x, y: y}
+  add: (x, y) ->
+    @vert.push { x: x, y: y }
 
   # 頂点削除
-  delete: (i)->
+  delete: (i) ->
     @vert.spice i, 1
 
   # 頂点半径設定
-  setRadian: (r)->
+  setRadian: (r) ->
     @rad = r
 
   # 頂点描画
   drawVertex: ->
     @canvas.beginPath()
     for e in @vert
-      @canvas.arc e.x, e.y, @rad, 0, Math.PI*2, true
+      @canvas.arc e.x, e.y, @rad, 0, Math.PI * 2, true
     @canvas.fill()

@@ -19,7 +19,7 @@ window.onload = ->
   cvs.after?()
 
   # マウスを移動させた時
-  canvas.onmousemove = (event)->
+  canvas.onmousemove = (event) ->
     # ブラウザごとに取れるattrが違うらしい
     # buttons -> firefox, IE10
     # which -> chrome
@@ -28,11 +28,11 @@ window.onload = ->
     cvs.setMousePos(event)
     cvs.setMouseClk(state > 0)
   # マウスを離した時
-  canvas.onmouseup = (event)->
+  canvas.onmouseup = (event) ->
     cvs.setMousePos(event)
     cvs.setMouseClk(false)
   # マウスでクリックした時
-  canvas.onmousedown = (event)->
+  canvas.onmousedown = (event) ->
     cvs.setMousePos(event)
     cvs.setMouseClk(true)
 
