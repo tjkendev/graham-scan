@@ -14,7 +14,6 @@ module.exports = (grunt)->
             "process.env":
               "NODE_ENV": JSON.stringify("production")
           ),
-          new webpack.optimize.UglifyJsPlugin()
         )
     # grunt-contrib-less
     less:
@@ -35,19 +34,6 @@ module.exports = (grunt)->
       target:
         src: 'public/css/app.css'
         dest: 'public/css/app.min.css'
-    # grunt-contrib-uglify
-    uglify:
-      options:
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-        mangle: true
-        compress: true
-        report: 'gzip'
-      target:
-        src: 'public/js/app.js'
-        dest: 'public/js/app.min.js'
-    # grunt-image
-    image:
-      files: []
     # grunt-contrib-watch
     watch:
       # webpack task
@@ -59,7 +45,15 @@ module.exports = (grunt)->
           'src/jade/**/*.jade'
           'webpack.config.js'
         ]
-        tasks: ['webpack', 'uglify']
+        tasks: ['webpack']
+      # jade-html task
+      jade_html:
+        options:
+          spawn: true
+        files: [
+          'src/jade-html/**/*.jade'
+        ]
+        tasks: ['jade']
       # less task
       less:
         options:
@@ -73,10 +67,8 @@ module.exports = (grunt)->
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
-  grunt.loadNpmTasks 'grunt-contrib-uglify'
-  grunt.loadNpmTasks 'grunt-image'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-coffee-jshint'
   grunt.loadNpmTasks 'grunt-webpack'
 
-  grunt.registerTask 'default', ['less:development', 'cssmin', 'webpack', 'uglify']
+  grunt.registerTask 'default', ['jade', 'less:development', 'cssmin', 'webpack']

@@ -3,14 +3,14 @@ module.exports = class GraphClass
   canvas: null
   graph: {}
 
-  constructor: (canvas)->
+  constructor: (canvas) ->
     @canvas = canvas
 
   clear: ->
     @graph = {}
 
   # 頂点の追加
-  setNode: (i, x, y, r)->
+  setNode: (i, x, y, r) ->
     if i in @graph
       @graph[i].x = x
       @graph[i].y = y
@@ -24,12 +24,12 @@ module.exports = class GraphClass
       }
 
   # 頂点情報の取得
-  getNode: (i)->
+  getNode: (i) ->
     return null if i in @graph
     return @graph[i]
 
   # 辺の追加
-  setEdge: (i, j, c=0)->
+  setEdge: (i, j, c = 0) ->
     return false if !(i in @graph) || !(j in @graph)
     @graph[i].edges.push j
     return true
@@ -38,17 +38,17 @@ module.exports = class GraphClass
   drawNodes: ->
     @canvas.beginPath()
     for node in @graph
-      @canvas.arc(node.x, node.y, node.r, 0, Math.PI*2, true)
-      @canvas.arc(node.x, node.y, node.r, 0, Math.PI*2, false)
+      @canvas.arc node.x, node.y, node.r, 0, Math.PI * 2, true
+      @canvas.arc node.x, node.y, node.r, 0, Math.PI * 2, false
     @canvas.fill()
     @canvas.stroke()
 
   # 辺の描画
   drawEdges: ->
     @canvas.beginPath()
-    _.each @graph, (e, from)=>
+    _.each @graph, (e, from) =>
       x0 = e.x; y0 = e.y
-      _.each e.edges, (to)=>
+      _.each e.edges, (to) =>
         @canvas.moveTo e.x, e.y
         @canvas.lineTo @graph[to].x, @graph[to].y
     @canvas.stroke()
