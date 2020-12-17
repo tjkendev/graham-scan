@@ -71,4 +71,4 @@ module.exports = (grunt)->
   grunt.loadNpmTasks 'grunt-coffee-jshint'
   grunt.loadNpmTasks 'grunt-webpack'
 
-  grunt.registerTask 'default', ['jade', 'less:development', 'cssmin', 'webpack']
+  grunt.registerTask 'default', ['less:development', 'cssmin', 'webpack']

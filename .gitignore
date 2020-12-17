@@ -1,6 +1,6 @@
 # public
-public/js/app.js
 public/css/app.css
+public/index.html
 
 # node, npm
 node_modules
