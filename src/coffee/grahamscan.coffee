@@ -21,7 +21,7 @@ module.exports = class CanvasApp extends CanvasClass
 
   # コンストラクタ
   constructor: ->
-    super
+    super arguments...
     @ch = new ConvexHullClass()
 
   # 初期化処理

@@ -1,8 +1,10 @@
 // webpack.config.js
 var path = require('path');
 var webpack = require('webpack');
+var TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
 
   // 進捗状況を表示する
   progress: true,
@@ -18,7 +20,7 @@ module.exports = {
 
   // module
   module: {
-    loaders: [
+    rules: [
       {test: /\.jade$/, loader: "pug-loader"},
       {test: /\.less$/, loader: 'style!css!less'},
       {test: /\.coffee$/, loader: 'coffee-loader'},
@@ -50,4 +52,14 @@ module.exports = {
       }
     )
   ],
+
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          ecma: 6
+        }
+      })
+    ]
+  }
 };
