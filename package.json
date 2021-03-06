@@ -36,7 +36,7 @@
     "jquery": "^3.5.1",
     "lodash.template": "^4.5.0",
     "node-forge": ">=0.10.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0",
     "querystringify": "^2.2.0",
     "terser-webpack-plugin": "^4.2.3",
