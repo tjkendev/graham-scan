@@ -15,8 +15,8 @@ module.exports = (grunt)->
               "NODE_ENV": JSON.stringify("production")
           ),
         )
-    # grunt-contrib-jade
-    jade:
+    # grunt-contrib-pug
+    pug:
       html:
         options:
           pretty: true
@@ -65,7 +65,7 @@ module.exports = (grunt)->
         files: [
           'src/jade-html/**/*.jade'
         ]
-        tasks: ['jade']
+        tasks: ['pug']
       # less task
       less:
         options:
@@ -76,11 +76,11 @@ module.exports = (grunt)->
         tasks: ['less:development', 'cssmin']
   )
 
-  grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-pug'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-coffee-jshint'
   grunt.loadNpmTasks 'grunt-webpack'
 
-  grunt.registerTask 'default', ['jade', 'less:development', 'cssmin', 'webpack']
+  grunt.registerTask 'default', ['pug', 'less:development', 'cssmin', 'webpack']
