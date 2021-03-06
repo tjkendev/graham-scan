@@ -18,7 +18,7 @@
   "author": "jakejaga",
   "license": "MIT",
   "dependencies": {
-    "acorn": "^8.0.4",
+    "acorn": "^8.0.5",
     "braces": "^3.0.2",
     "clean-css": "^4.2.3",
     "coffee-loader": "^1.0.1",
@@ -33,15 +33,15 @@
     "grunt-contrib-pug": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-webpack": "^4.0.2",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "lodash.template": "^4.5.0",
     "node-forge": ">=0.10.0",
-    "pug": "^3.0.1",
+    "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "querystringify": "^2.2.0",
     "terser-webpack-plugin": "^4.2.3",
     "underscore": "^1.12.0",
     "webpack": "^4.44.2",
-    "yargs-parser": "^20.2.4"
+    "yargs-parser": "^20.2.6"
   }
 }
