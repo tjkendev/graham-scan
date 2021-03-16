@@ -18,7 +18,7 @@
   "author": "jakejaga",
   "license": "MIT",
   "dependencies": {
-    "acorn": "^8.0.5",
+    "acorn": "^8.1.0",
     "braces": "^3.0.2",
     "clean-css": "^4.2.3",
     "coffee-loader": "^1.0.1",
@@ -41,8 +41,8 @@
     "querystringify": "^2.2.0",
     "raw-loader": "^4.0.2",
     "terser-webpack-plugin": "^4.2.3",
-    "underscore": "^1.12.0",
+    "underscore": "^1.12.1",
     "webpack": "^4.44.2",
-    "yargs-parser": "^20.2.6"
+    "yargs-parser": "^20.2.7"
   }
 }
