@@ -1,7 +1,7 @@
 path = require('path')
 webpack = require('webpack')
 
-module.exports = (grunt)->
+module.exports = (grunt) ->
   webpackConfig = require('./webpack.config.js')
   grunt.initConfig(
     pkg: grunt.file.readJSON('package.json')

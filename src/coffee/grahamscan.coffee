@@ -29,7 +29,7 @@ module.exports = class CanvasApp extends CanvasClass
     @ch.clear()
     wid = @canvas.width
     hei = @canvas.height
-    for i in [0 .. n-1]
+    for i in [0 .. (n - 1)]
       x = Math.floor(Math.random() * (wid - 2 * @padding) / @stroke) * @stroke + @padding
       y = Math.floor(Math.random() * (hei - 2 * @padding) / @stroke) * @stroke + @padding
       @ch.add(x, y)
@@ -168,7 +168,7 @@ module.exports = class CanvasApp extends CanvasClass
     ###
 
     # 頂点
-    for i in [0 .. n-1]
+    for i in [0 .. (n - 1)]
       @context.beginPath()
       @context.fillStyle = if i != @ch.i then "#000" else "#00f"
       @context.arc va[i][0], va[i][1], 5, 0, 2 * Math.PI, true

@@ -13,8 +13,8 @@ HTML5上でGrahamScan(凸包アルゴリズム)を表示できるようにした
 - http://smijake3.s602.xrea.com/tips/algorithm/graham_scan/
 
 ## 構築環境
-- Node.js v7.5.0
-- npm v4.2.0
+
+- npm v7.6.3
   - grunt
     - webpack
   - coffee
@@ -22,26 +22,18 @@ HTML5上でGrahamScan(凸包アルゴリズム)を表示できるようにした
     - (jadeで実装していたので今も一部jade)
   - less
 
-## 環境準備
-
-### Mac
-```bash
-$ brew install nvm
-$ nvm install v7.5.0
-$ nvm use v7.5.0
-$ nvm alias default v7.5.0
-```
-
 ## コンパイル
 
 npmで必要なモジュールをインストール
+
 ```bash
-$ npm install
+npm install
 ```
 
 プログラムのコンパイル
+
 ```bash
-$ npm run compile
+npm run compile
 ```
 
 コンパイルに成功すると"public"フォルダ内に成果物ができる
@@ -49,8 +41,9 @@ $ npm run compile
 ## その他
 
 ### - watch
-ファイルを変更するごとに自動でコンパイルしてくれる
-```bash
-$ npm run watch
-```
 
+ファイルを変更するごとに自動でコンパイルしてくれる
+
+```bash
+npm run watch
+```
