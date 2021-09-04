@@ -21,7 +21,7 @@
     "acorn": "^8.4.1",
     "braces": "^3.0.2",
     "clean-css": "^5.1.5",
-    "coffee-loader": "^1.0.1",
+    "coffee-loader": "^3.0.0",
     "coffeescript": "^2.5.1",
     "constantinople": "^4.0.1",
     "grunt": "^1.4.1",
