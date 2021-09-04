@@ -21,9 +21,9 @@ module.exports = {
   // module
   module: {
     rules: [
-      {test: /\.jade$/, loader: "raw-loader!pug-plain-loader"},
-      {test: /\.less$/, loader: 'style!css!less'},
-      {test: /\.coffee$/, loader: 'coffee-loader'},
+      {test: /\.jade$/, use: ["raw-loader", "pug-plain-loader"]},
+      {test: /\.less$/, use: ["style-loader", "css-loader", "less-loader"]},
+      {test: /\.coffee$/, use: ["coffee-loader"]},
     ],
   },
 
