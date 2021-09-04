@@ -5,7 +5,7 @@
   "main": "./src/coffee/main.coffee",
   "scripts": {
     "coffee": "grunt webpack",
-    "jade-html": "grunt jade:html",
+    "pug-html": "grunt pug:html",
     "less": "grunt less:development",
     "cssmin": "grunt cssmin",
     "compile": "grunt",

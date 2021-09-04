@@ -22,8 +22,8 @@ module.exports = (grunt) ->
           pretty: true
         files: [
           expand: true
-          cwd: 'src/jade-html/'
-          src: '**/*.jade'
+          cwd: 'src/pug-html/'
+          src: '**/*.pug'
           dest: 'public/'
           ext: '.html'
         ]
@@ -54,16 +54,16 @@ module.exports = (grunt) ->
           spawn: true
         files: [
           'src/coffee/**/*.coffee'
-          'src/jade/**/*.jade'
+          'src/pug/**/*.pug'
           'webpack.config.js'
         ]
         tasks: ['webpack']
-      # jade-html task
-      jade_html:
+      # pug-html task
+      pug_html:
         options:
           spawn: true
         files: [
-          'src/jade-html/**/*.jade'
+          'src/pug-html/**/*.pug'
         ]
         tasks: ['pug']
       # less task

@@ -19,7 +19,6 @@ HTML5上でGrahamScan(凸包アルゴリズム)を表示できるようにした
     - webpack
   - coffee
   - pug
-    - (jadeで実装していたので今も一部jade)
   - less
 
 ## コンパイル

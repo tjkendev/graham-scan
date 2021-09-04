@@ -7,7 +7,7 @@ CanvasClass = require 'coffee/router'
 window.onload = ->
 
   # bodyにベースを描画
-  $("body").html(require('jade/main.jade').default)
+  $("body").html(require('pug/main.pug').default)
 
   # canvasを取得
   canvas = $('#app_canvas')[0]
